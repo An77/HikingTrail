@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Hiking Trail administration</title>
+</head>
+<body bgcolor=#e6ffe6>
+
+<h2>Select your operation</h2><br>
+  
+<form>
+  <input type="radio" name="operation" id="create">Create bundle<br>
+  <input type="radio" name="operation" id="list">List bundle<br>
+  <input type="radio" name="operation" id="update">Update bundle<br>
+  <input type="radio" name="operation" id="delete">Delete bundle<br>
+</form>
+
+<button onclick="check()">Continue</button>
+<button onclick="logout()">Logout</button>
+
+<script>
+function check() {
+	
+	if (document.getElementById("create").checked){
+		alert ("Create");
+		window.location = "./create.html"; // Redirecting to other page.
+	
+	} else if (document.getElementById("list").checked){
+		window.location = "./list.html"; // Redirecting to other page.
+		
+	} else if (document.getElementById("update").checked){
+
+	} else if (document.getElementById("delete").checked){
+		
+	} else {
+		alert ("No operation choosen");
+	}
+}
+
+function logout() {
+	window.location = "./HikingTrailAdmin.html"; // Redirecting to other page.
+}
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HikingTrailAdmin</title>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="login.js"></script>
+</head>
+<body bgcolor=#e6ffe6>
+
+<h1>Hiking trail administration</h1>
+
+<h2>Login in as administrator</h2>
+<div class="main">
+
+<form id="form_id" method="post" name="myform">
+	<label>User Name :</label>
+	<input type="text" name="username" id="username"/>
+	<br>
+	<label>Password :</label>
+	<input type="password" name="password" id="password"/>
+	<br><br><br>
+	<input type="button" value="Login" id="submit" onclick="validate()"/>
+	</form>
+
+</div>
+
+<script>
+function validate(){
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+	
+	if ( username == "admin" && password == "admin"){
+		alert ("Login successfully");
+		window.location = "./administration.html"; // Redirecting to other page.
+		return false;
+	} else	{
+		
+		alert("Incorrect username or password");
+		return false;
+
+		}
+	}
+</script>
+</body>
+</html>
+
